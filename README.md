@@ -41,5 +41,11 @@ It is a known issue that pdfgen's output documents look different depending on w
 has `\r\n` or `\n` as line endings. Therefore, it is strongly recommended to configure Git to not convert newlines, as well as ensure that your editor ends its lines with LF (`\n`) and not CRLF (`\r\n`), as the former will accurately show what your
 templates will look like in production.
 
-### For NAV employees
-We are available at the Slack channel #team-sykmelding
+### Contact
+
+This project is maintained by navikt/teamsykmelding
+
+Questions and/or feature requests? Please create an [issue](https://github.com/navikt/pale-2-pdfgen/issues).
+
+If you work in [@navikt](https://github.com/navikt) you can reach us at the Slack
+channel [#team-sykmelding](https://nav-it.slack.com/archives/CMA3XV997).
