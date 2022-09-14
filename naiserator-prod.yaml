@@ -37,5 +37,9 @@ spec:
     requests:
       cpu: 500m
       memory: 512Mi
-  ingresses:
-    - "https://pale-2-pdfgen.intern.nav.no"
+  accessPolicy:
+    inbound:
+      rules:
+        - application: pale-2-sak
+          namespace: teamsykmelding
+          cluster: prod-gcp
