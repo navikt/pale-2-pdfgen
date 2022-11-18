@@ -112,15 +112,15 @@
     "status": "INVALID",
     "ruleHits": [
       {
-        "ruleName": "PASIENT_YNGRE_ENN_13",
-        "messageForSender": "Pasienten er under 13 år. Sykmelding kan ikke benyttes.",
-        "messageForUser": "Pasienten er under 13 år. Sykmelding kan ikke benyttes.",
+        "ruleName": "BEHANDLER_MANGLER_AUTORISASJON_I_HPR",
+        "messageForSender": "Den som skrev legeerklæringen manglet autorisasjon.",
+        "messageForUser": "Behandler har ikke gyldig autorisasjon i HPR",
         "ruleStatus": "INVALID"
       },
       {
-        "ruleName": "PASIENT_ELDRE_ENN_70",
-        "messageForSender": "Pasienten er over 70 år. Sykmelding kan ikke benyttes.",
-        "messageForUser": "Sykmelding kan ikke benyttes etter at du har fylt 70 år",
+        "ruleName": "BEHANDLER_SUSPENDERT",
+        "messageForSender": "Den som sendte legeerklæringen har mistet retten til å skrive legeerklæringer.",
+        "messageForUser": "Behandler er suspendert av NAV på konsultasjonstidspunkt",
         "ruleStatus": "INVALID"
       }
     ]
