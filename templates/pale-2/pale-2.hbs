@@ -26,7 +26,7 @@
         }
 
         table thead {
-            background-color: lightblue;
+            background-color: #2ea12e;
         }
 
         table thead td {
@@ -129,12 +129,12 @@
     </tr>
     <tr>
         <td><h4>0.3</h4></td>
-        <td>YrkesrettetAttfoering</td>
+        <td>Yrkesrettet attføring</td>
         <td>{{#if legeerklaering.yrkesrettetAttforing }}X{{/if}}</td>
     </tr>
      <tr>
         <td><h4>0.4</h4></td>
-        <td>Uførepensjon</td>
+        <td>Uføretrygd(Uførepensjon)</td>
         <td>{{#if legeerklaering.uforepensjon }}X{{/if}}</td>
     </tr>
     </tbody>
@@ -259,8 +259,8 @@
         <td><h4>Bør NAV-kontoret vurdere om det er en:</h4></td>
         <td>
             <h4>2.7.1 Yrkesskade/Yrkessykdom</h4>
-            {{#if legeerklaering.sykdomsopplysninger.borNavKontoretVurdereOmDetErEnYrkesskade }}JA{{/if}}
-            {{#unless legeerklaering.sykdomsopplysninger.borNavKontoretVurdereOmDetErEnYrkesskade}}NEI{{/unless}}
+            {{#if legeerklaering.sykdomsopplysninger.borNavKontoretVurdereOmDetErEnYrkesskade }}Ja{{/if}}
+            {{#unless legeerklaering.sykdomsopplysninger.borNavKontoretVurdereOmDetErEnYrkesskade}}Nei{{/unless}}
         </td>
     </tr>
     </tbody>
@@ -352,15 +352,15 @@
             <td><h4>4.1</h4></td>
             <td>
                 <h4>Er det ut fra en medisinsk vurdering aktuelt med noen av følgende tiltak nå?</h4>
-                {{#if legeerklaering.forslagTilTiltak.behov}}JA{{/if}}
-                {{#unless legeerklaering.forslagTilTiltak.behov}}NEI{{/unless}}
+                {{#if legeerklaering.forslagTilTiltak.behov}}Ja{{/if}}
+                {{#unless legeerklaering.forslagTilTiltak.behov}}Nei{{/unless}}
             </td>
             {{#if legeerklaering.forslagTilTiltak.behov}}
             <td>
                 <h4>Tiltak nå</h4>
                 <ul>
                     {{#if legeerklaering.forslagTilTiltak.kjopAvHelsetjenester}}
-                    <li>a. Kjøp av helse-tjenester</li>
+                    <li>a. Kjøp av helsetjenester</li>
                     {{/if}}
                     {{#if legeerklaering.forslagTilTiltak.reisetilskudd }}
                     <li>b. Reisetilskott i stedet for sykepenger/ arbeidsavklaringspenger</li>
@@ -369,7 +369,7 @@
                     <li>c. Aktiv syk-melding</li>
                     {{/if}}
                     {{#if legeerklaering.forslagTilTiltak.hjelpemidlerArbeidsplassen}}
-                    <li>d. Hjelpemidler på arb.plassen</li>
+                    <li>d. Hjelpemidler på arbeidsplassen</li>
                     {{/if}}
                     {{#if legeerklaering.forslagTilTiltak.arbeidsavklaringspenger }}
                     <li>e. Arbeidsavklarings-penger</li>
@@ -436,8 +436,8 @@
         <td><h4>Vurdering av arbeidsevnen ang tidligere arbeid</h4></td>
         <td>
             <h4>5.4.1 Gjenoppta det tidligere arbeid</h4>
-            {{#if legeerklaering.funksjonsOgArbeidsevne.kanGjenopptaTidligereArbeid }}JA{{/if}}
-            {{#unless legeerklaering.funksjonsOgArbeidsevne.kanGjenopptaTidligereArbeid}}NEI{{/unless}}
+            {{#if legeerklaering.funksjonsOgArbeidsevne.kanGjenopptaTidligereArbeid }}Ja{{/if}}
+            {{#unless legeerklaering.funksjonsOgArbeidsevne.kanGjenopptaTidligereArbeid}}Nei{{/unless}}
         </td>
         <td>
             <h4>5.4.2 Når kan pasient gjenoppta det tidligere arbeid</h4>
@@ -447,11 +447,11 @@
     </tr>
     <tr>
         <td><h4>5.5</h4></td>
-        <td><h4>Vurdering av arbeidsevnen ang ta annet arbeid</h4></td>
+        <td><h4>Vurdering av arbeidsevnen angående å ta annet arbeid</h4></td>
         <td>
             <h4>5.5.1 Kan ta annet arbeid</h4>
-            {{#if legeerklaering.funksjonsOgArbeidsevne.kanTaAnnetArbeid }}JA{{/if}}
-            {{#unless legeerklaering.funksjonsOgArbeidsevne.kanTaAnnetArbeid}}NEI{{/unless}}
+            {{#if legeerklaering.funksjonsOgArbeidsevne.kanTaAnnetArbeid }}Ja{{/if}}
+            {{#unless legeerklaering.funksjonsOgArbeidsevne.kanTaAnnetArbeid}}Nei{{/unless}}
         </td>
         <td>
             <h4>5.5.2 Når kan pasient ta annet arbeid</h4>
@@ -462,7 +462,7 @@
 
     <tr>
         <td><h4>5.6</h4></td>
-        <td><h4>Vurdering av arbeidsevnen hensyn</h4></td>
+        <td><h4>Vurdering av arbeidsevnen og eventuelle hensyn</h4></td>
         <td>
             <h4>5.6.1 Hva kan pasient ikke gjøre i den nåværende arbeid?</h4>
             {{ legeerklaering.funksjonsOgArbeidsevne.kanIkkeGjenopptaNaverendeArbeid }}
@@ -488,14 +488,14 @@
         <td><h4>6.1</h4></td>
         <td>
             <h4>a) Antas behandlingen å føre til bedring av arbeidsevnen?</h4>
-            {{#if legeerklaering.prognose.vilForbedreArbeidsevne }}JA{{/if}}
-            {{#unless legeerklaering.prognose.vilForbedreArbeidsevne }}NEI{{/unless}}
+            {{#if legeerklaering.prognose.vilForbedreArbeidsevne }}Ja{{/if}}
+            {{#unless legeerklaering.prognose.vilForbedreArbeidsevne }}Nei{{/unless}}
         </td>
     </tr>
     <tr>
         <td><h4>6.2</h4></td>
         <td>
-            <h4>b) Anslå varigheten av sykdom/skade (evt. lyte)</h4>
+            <h4>b) Anslå varigheten av sykdom/skade (ev. lyte)</h4>
             {{ legeerklaering.prognose.anslattVarighetSykdom }}
         </td>
     </tr>
@@ -593,7 +593,7 @@
         {{#if legeerklaering.pasientenBurdeIkkeVite}}
             {{ legeerklaering.pasientenBurdeIkkeVite }}
         {{/if}}
-        {{#unless legeerklaering.pasientenBurdeIkkeVite}}NEI{{/unless}}
+        {{#unless legeerklaering.pasientenBurdeIkkeVite}}Nei{{/unless}}
     </tr>
     </tbody>
 </table>
@@ -620,7 +620,7 @@
     </tr>
 
     <tr>
-        <td><h4>11.4 Legens telefonnr.</h4></td>
+        <td><h4>11.4 Legens telefonnummer</h4></td>
         {{ legeerklaering.signatur.tlfNummer }}
     </tr>
 
