@@ -2,6 +2,9 @@
 <html lang="no">
 <head>
     <meta charset="UTF-8"/>
+    <meta name="description" content="legeerklæring ved arbeidsuførhet"/>
+    <meta name="author" content="pale-2-pdfgen"/>
+    <meta name="subject" content="Legeerklæring"/>
     <style>
         @page {
             margin: 1cm;
@@ -378,8 +381,9 @@
                     <li>f. Friskemelding til arbeidsformidling</li>
                     {{/if}}
                     {{#if legeerklaering.forslagTilTiltak.andreTiltak }}
-                    <li>g. Andre (hvilke?)</li>
-                    <p>{{ legeerklaering.forslagTilTiltak.andreTiltak }}</p>
+                    <li>g. Andre (hvilke?)
+                        {{ legeerklaering.forslagTilTiltak.andreTiltak }}
+                    </li>
                     {{/if}}
                     </ul>
             </td>
@@ -401,7 +405,6 @@
         </tr>
     </tbody>
 </table>
-
 
 <table>
     <thead>
@@ -590,10 +593,10 @@
     <tbody>
     <tr>
         <td><h4>10.1 Er det noe i legeerklæringen som pasienten ikke bør få vite av medisinske grunner?</h4></td>
-        {{#if legeerklaering.pasientenBurdeIkkeVite}}
+        <td>{{#if legeerklaering.pasientenBurdeIkkeVite}}
             {{ legeerklaering.pasientenBurdeIkkeVite }}
         {{/if}}
-        {{#unless legeerklaering.pasientenBurdeIkkeVite}}Nei{{/unless}}
+        {{#unless legeerklaering.pasientenBurdeIkkeVite}}Nei{{/unless}}</td>
     </tr>
     </tbody>
 </table>
@@ -608,20 +611,20 @@
     <tbody>
     <tr>
         <td><h4>11.1 Dato</h4></td>
-        {{iso_to_nor_date legeerklaering.signatur.dato }}
+        <td>{{iso_to_nor_date legeerklaering.signatur.dato }}</td>
     </tr>
     <tr>
         <td><h4>11.2 Legens adresse</h4></td>
-        {{ legeerklaering.signatur.adresse }}, {{ legeerklaering.signatur.postnummer }} {{ legeerklaering.signatur.poststed }}
+        <td> {{ legeerklaering.signatur.adresse }}, {{ legeerklaering.signatur.postnummer }} {{ legeerklaering.signatur.poststed }}</td>
     </tr>
     <tr>
         <td><h4>11.3 Legens underskrift</h4></td>
-        {{ legeerklaering.signatur.navn }}
+        <td>{{ legeerklaering.signatur.navn }}</td>
     </tr>
 
     <tr>
         <td><h4>11.4 Legens telefonnummer</h4></td>
-        {{ legeerklaering.signatur.tlfNummer }}
+        <td>{{ legeerklaering.signatur.tlfNummer }}</td>
     </tr>
 
     </tbody>

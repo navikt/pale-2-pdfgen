@@ -23,10 +23,13 @@ docker run \
         -e JDK_JAVA_OPTIONS \
         -it \
         --rm \
-        ghcr.io/navikt/pdfgen:1.5.1
+        ghcr.io/navikt/pdfgen:2.0.3
 ```
 
-Or you can use the convenience script `./run_development.sh`
+Or you can use the convenience script 
+```bash 
+./run_development.sh
+```
 
 When running the application you can use the env var `DISABLE_PDF_GET` to enable GET requests at
 `/api/v1/genpdf/<application>/<template>` which looks for test data at `data/<application>/<template>.json` and outputs
