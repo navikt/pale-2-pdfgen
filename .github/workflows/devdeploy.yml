@@ -1,8 +1,9 @@
-name: Deploy to dev and prod
+name: Deploy to dev
 on:
   push:
     branches:
-      - main
+      - '*'
+      - '!main'
 
 jobs:
   build-push-deploy:
@@ -27,11 +28,4 @@ jobs:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY_TEAMSYKMELDING }}
           CLUSTER: dev-gcp
           RESOURCE: naiserator-dev.yaml
-          VAR: image=${{ steps.docker-build-push.outputs.image }}
-      - name: deploy to prod-gcp
-        uses: nais/deploy/actions/deploy@master
-        env:
-          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY_TEAMSYKMELDING }}
-          CLUSTER: prod-gcp
-          RESOURCE: naiserator-prod.yaml
           VAR: image=${{ steps.docker-build-push.outputs.image }}
