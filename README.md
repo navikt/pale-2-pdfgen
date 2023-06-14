@@ -1,13 +1,19 @@
 [![Build status](https://github.com/navikt/pale-2-pdfgen/workflows/Deploy%20to%20dev%20and%20prod/badge.svg)](https://github.com/navikt/pale-2-pdfgen/workflows/Deploy%20to%20dev%20and%20prod/badge.svg)
 # PdfGen
-Repository for team sykmelding pale-2 templates.
+Repository for pale-2 templates
 
 ## Technologies & Tools
 
 * [pdfgen](https://github.com/navikt/pdfgen)
+* Docker
+* Handlebars
+* Json
 
 #### Creating a docker image
-Creating a docker image should be as simple as `docker build -t pale-2-pdfgen .`
+Creating a docker image should be as simple as
+```bash
+docker build -t pale-2-pdfgen .
+```
 
 ## Getting started
 ### Run in development mode
@@ -23,7 +29,7 @@ docker run \
         -e JDK_JAVA_OPTIONS \
         -it \
         --rm \
-        ghcr.io/navikt/pdfgen:2.0.6
+        ghcr.io/navikt/pdfgen:2.0.8
 ```
 
 Or you can use the convenience script 
