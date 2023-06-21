@@ -57,7 +57,7 @@
         }
 
         .header {
-
+            margin-top: 30px;
         }
 
         .tr5 {
@@ -101,7 +101,9 @@
         }
 
         .header-ikon {
-            width: 50%;
+            width: 20%;
+            position: relative;
+            left: 560px;
         }
     </style>
     <title>{{#eq validationResult.status "INVALID" }}AVVIST {{/eq}}Legeerklæring for {{ pasient.fornavn }}{{#if pasient.mellomnavn }} {{pasient.mellomnavn}}{{/if}} {{pasient.etternavn}} ({{ pasient.fnr }}) </title>
