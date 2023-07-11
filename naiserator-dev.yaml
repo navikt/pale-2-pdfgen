@@ -32,9 +32,9 @@ spec:
     enabled: false
   resources:
     limits:
-      memory: 500Mi
+      memory: 1024Mi
     requests:
-      cpu: 10m
+      cpu: 100m
       memory: 350Mi
   accessPolicy:
     inbound:
