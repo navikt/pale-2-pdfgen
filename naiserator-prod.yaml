@@ -45,3 +45,11 @@ spec:
         - application: isbehandlerdialog
           namespace: teamsykefravr
           cluster: prod-gcp
+    outbound:
+      rules:
+        - application: pale-2-sak
+          namespace: teamsykmelding
+          cluster: prod-gcp
+        - application: isbehandlerdialog
+          namespace: teamsykefravr
+          cluster: prod-gcp
