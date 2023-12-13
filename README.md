@@ -6,7 +6,7 @@ Repository for pale-2 templates
 
 * [pdfgen](https://github.com/navikt/pdfgen)
 * Docker
-* Handlebars
+* [Handlebars js](https://handlebarsjs.com/) 
 * Json
 
 #### Creating a docker image
@@ -17,22 +17,7 @@ docker build -t pale-2-pdfgen .
 
 ## Getting started
 ### Run in development mode
-To run the application with templates, data and fonts locally mounted you can use
-```bash
-docker run \
-        -v /full/path/to/templates:/app/templates \
-        -v /full/path/to/fonts:/app/fonts \
-        -v /full/path/to/data:/app/data \
-        -v /full/path/to/resources:/app/resources \
-        -p 8080:8080 \
-        -e DISABLE_PDF_GET=false \
-        -e JDK_JAVA_OPTIONS \
-        -it \
-        --rm \
-        ghcr.io/navikt/pdfgen:2.0.20
-```
-
-Or you can use the convenience script 
+To run the application with templates, data and fonts locally mounted you can use the convenience script 
 ```bash 
 ./run_development.sh
 ```
