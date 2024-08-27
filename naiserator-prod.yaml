@@ -10,7 +10,7 @@ spec:
   port: 8080
   replicas:
     min: 2
-    max: 5
+    max: 6
     cpuThresholdPercentage: 70
   liveness:
     path: /internal/is_alive
