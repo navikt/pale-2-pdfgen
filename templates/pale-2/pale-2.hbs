@@ -199,7 +199,7 @@
     <tr>
         <td><h4>1.7</h4></td>
         <td>Arbeidsgiverens addresse</td>
-        <td>{{ legeerklaering.pasient.arbeidsgiver.adresse }}, {{ legeerklaering.pasient.arbeidsgiver.postnummer }} {{ legeerklaering.pasient.arbeidsgiver.poststed }}</td>
+        <td>{{ legeerklaering.pasient.arbeidsgiver.adresse }} {{#if legeerklaering.pasient.arbeidsgiver.adresse }}, {{/if}} {{ legeerklaering.pasient.arbeidsgiver.postnummer }} {{ legeerklaering.pasient.arbeidsgiver.poststed }}</td>
     </tr>
     </tbody>
 </table>
