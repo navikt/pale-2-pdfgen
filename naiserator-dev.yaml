@@ -11,7 +11,7 @@ spec:
   replicas:
     min: 1
     max: 2
-    cpuThresholdPercentage: 70
+    cpuThresholdPercentage: 80
   liveness:
     path: /internal/is_alive
     timeout: 1
