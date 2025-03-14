@@ -7,6 +7,7 @@ on:
 jobs:
   build-push-deploy:
     permissions:
+      packages: "write"
       contents: "read"
       id-token: "write"
     name: Checkout code and create docker tag
