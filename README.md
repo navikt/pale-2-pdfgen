@@ -17,6 +17,12 @@ docker build -t pale-2-pdfgen .
 
 ## Getting started
 ### Run in development mode
+Login in to gcloud and run naisdevice in the background, authenticate to google docker repository
+```bash 
+gcloud auth login (if you have not done it yet)
+gcloud auth configure-docker europe-north1-docker.pkg.dev
+```
+
 To run the application with templates, data and fonts locally mounted you can use the convenience script 
 ```bash 
 ./run_development.sh
