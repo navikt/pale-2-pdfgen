@@ -11,7 +11,7 @@ spec:
   replicas:
     min: 2
     max: 8
-    cpuThresholdPercentage: 80
+    cpuThresholdPercentage: 90
   liveness:
     path: /internal/is_alive
     timeout: 1
@@ -40,8 +40,8 @@ spec:
     limits:
       memory: 2048Mi
     requests:
-      cpu: 50m
-      memory: 512Mi
+      cpu: 70m
+      memory: 1300Mi
   accessPolicy:
     inbound:
       rules:
