@@ -1,13 +1,13 @@
 [![Build status](https://github.com/navikt/pale-2-pdfgen/workflows/Deploy%20to%20dev%20and%20prod/badge.svg)](https://github.com/navikt/pale-2-pdfgen/workflows/Deploy%20to%20dev%20and%20prod/badge.svg)
-# PdfGen
+# Pale-2 PdfGen
 Repository for pale-2 templates
 
 ## Technologies & Tools
 
 * [pdfgen](https://github.com/navikt/pdfgen)
-* Docker
+* [Docker](https://www.docker.com/)
 * [Handlebars js](https://handlebarsjs.com/) 
-* Json
+* [Json](https://www.json.org/json-en.html)
 
 #### Creating a docker image
 Creating a docker image should be as simple as
