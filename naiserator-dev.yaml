@@ -13,7 +13,7 @@ spec:
     max: 2
     scalingStrategy:
       cpu:
-        threshold: 90
+        thresholdPercentage: 90
   liveness:
     path: /internal/is_alive
     timeout: 1
