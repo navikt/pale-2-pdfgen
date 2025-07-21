@@ -10,7 +10,7 @@ spec:
   port: 8080
   replicas:
     min: 2
-    max: 4
+    max: 3
     scalingStrategy:
       cpu:
         thresholdPercentage: 90
@@ -42,8 +42,8 @@ spec:
     limits:
       memory: 2048Mi
     requests:
-      cpu: 90m
-      memory: 1290Mi
+      cpu: 60m
+      memory: 1200Mi
   accessPolicy:
     inbound:
       rules:
