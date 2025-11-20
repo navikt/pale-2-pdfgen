@@ -30,6 +30,9 @@ spec:
   prometheus:
     enabled: true
     path: /internal/prometheus
+  env:
+    - name: JDK_JAVA_OPTIONS
+      value: "-Xms3g -Xmx4g"
   observability:
     autoInstrumentation:
       enabled: true
