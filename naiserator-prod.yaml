@@ -32,7 +32,7 @@ spec:
     path: /internal/prometheus
   env:
     - name: JDK_JAVA_OPTIONS
-      value: "-Xms3g -Xmx4g"
+      value: "-Xms3g -Xmx5g"
   observability:
     autoInstrumentation:
       enabled: true
@@ -43,7 +43,7 @@ spec:
         - id: elastic
   resources:
     limits:
-      memory: 4048Mi
+      memory: 6096Mi
     requests:
       cpu: 70m
       memory: 3048Mi
