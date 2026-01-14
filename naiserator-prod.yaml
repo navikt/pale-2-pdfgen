@@ -40,7 +40,6 @@ spec:
     logging:
       destinations:
         - id: loki
-        - id: elastic
   resources:
     limits:
       memory: 6096Mi
