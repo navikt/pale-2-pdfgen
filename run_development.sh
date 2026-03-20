@@ -2,7 +2,7 @@
 
 CURRENT_PATH="$(cd "$(dirname "$1")"; pwd)/$(basename "$1")"
 
-docker pull ghcr.io/navikt/pdfgen:2.0.99
+docker pull ghcr.io/navikt/pdfgen-rs:0.1.2
 docker run \
         -v $CURRENT_PATH/templates:/app/templates \
         -v $CURRENT_PATH/fonts:/app/fonts \
@@ -10,8 +10,6 @@ docker run \
         -v $CURRENT_PATH/resources:/app/resources \
         -p 8080:8080 \
         -e DISABLE_PDF_GET=false \
-        -e JDK_JAVA_OPTIONS \
-        -e DEV_MODE=true \
         -it \
         --rm \
-        ghcr.io/navikt/pdfgen:2.0.99
+        ghcr.io/navikt/pdfgen-rs:0.1.2
