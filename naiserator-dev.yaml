@@ -30,22 +30,16 @@ spec:
   prometheus:
     enabled: true
     path: /internal/prometheus
-  env:
-    - name: JDK_JAVA_OPTIONS
-      value: "-Xms256m -Xmx1536m"
   observability:
-    autoInstrumentation:
-      enabled: true
-      runtime: java
     logging:
       destinations:
         - id: loki
   resources:
     limits:
-      memory: 2048Mi
+      memory: 512Mi
     requests:
-      cpu: 30m
-      memory: 256Mi
+      cpu: 20m
+      memory: 64Mi
   accessPolicy:
     inbound:
       rules:
