@@ -2,7 +2,7 @@
 
 CURRENT_PATH="$(cd "$(dirname "$1")"; pwd)/$(basename "$1")"
 
-docker pull ghcr.io/navikt/pdfgenrs:0.1.13
+docker pull ghcr.io/navikt/pdfgenrs:0.1.14
 docker run \
         -v $CURRENT_PATH/templates:/app/templates \
         -v $CURRENT_PATH/fonts:/app/fonts \
@@ -12,5 +12,5 @@ docker run \
         -p 8080:8080 \
         -e DEV_MODE=true \
         -it \
-        --rm \
-        ghcr.io/navikt/pdfgenrs:0.1.13
+        --rm 
+        ghcr.io/navikt/pdfgenrs:0.1.14
